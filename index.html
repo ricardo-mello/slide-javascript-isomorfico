@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>AngularJS - ng-power</title>
+
+        <meta name="description" content="Apresentação sobre AngularJS no evento DAY.min.js do grupo GDG Duque de Caxias.">
+        <meta name="author" content="Igor Felipe">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+
+        <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+        <link rel="shortcut icon" href="./favicon.ico" />
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <meta itemprop="image" content="https://raw.githubusercontent.com/gdgduquedecaxias/introducao/master/img/gdg-caxias-intro.png">
+        <meta name="twitter:image:src" content="https://raw.githubusercontent.com/gdgduquedecaxias/introducao/master/img/gdg-caxias-intro.png">
+        <meta property="og:image" content="https://raw.githubusercontent.com/gdgduquedecaxias/introducao/master/img/gdg-caxias-intro.png"/>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- override de estilo -->
+        <link rel="stylesheet" href="css/override.css">
+        <link rel="stylesheet" href="css/base-min.css">
+        <link rel="stylesheet" href="css/forms-min.css">
+        <link rel="stylesheet" href="css/pure-min.css">
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <div class="slides">
+
+                <section data-background="img/angular.jpeg">
+                  <br><br><br><br><br><br>
+                  <h1 class="marked">ng-power</h1>
+                </section>
+
+                <section>
+                  <img class="circle-img" src="img/gabriel.jpg" alt="yo">
+                  <h2>ei, caras!</h2>
+                  <p>Eu sou Gabriel, organizer no GDG Caxias e developer na Unigranrio.</p>
+                  <p>GitHub <span class="marked">@gabrieclima</span></p>
+                  <p>Twitter <span class="marked">@gabriecslima</span></p>
+                  <p>FaceBook <span class="marked">@gabriecslima</span></p>
+                </section>
+
+                <section>
+                  <h2>o que o AngularJS tem de legal?</h2>
+                  <p class="fragment" data-fragment-index="0">two-way data binding</p>
+                  <p class="fragment" data-fragment-index="1">injeção de dependências</p>
+                  <p class="fragment" data-fragment-index="2">modularização e reuso</p>
+                  <p class="fragment" data-fragment-index="3">pronto pra trabalhar com APIs REST</p>
+                </section>
+
+                <section>
+                  <h2>Produtividade</h2>
+                  <img src="img/productvity.jpg"/>
+                </section>
+
+                <section ng-app="itemApp" ng-controller="itemCtrl">
+                  <h2>Exemplo two-way data binding</h2>
+                  <form class="pure-form" ng-submit="addItem()">
+                    <input type="text" ng-model="texto" class="pure-input-rounded" style="color: black; text-align : center;">
+                  </form>
+                  <p>{{texto}}</p>
+                  <p ng-repeat="item in items" class="marked">
+                    {{item}}
+                  </p>
+                </section>
+
+                <section>
+                  <h2>HTML</h2>
+                  <img src="img/html-angular.jpg" alt=""  />
+                </section>
+
+                <section>
+                  <h2>JS</h2>
+                  <img src="img/js-angular.jpg" alt="" />
+                </section>
+
+                <section data-background-image="img/magic.gif">
+                  <br><br><h1>it's magic!</h1>
+                </section>
+
+                <section>
+                  <h2>dependências</h2>
+                  <img src="img/dependencia-angular.jpg" alt="" />
+                </section>
+
+                <section>
+                  <h1>Questions?</h1>
+                </section>
+
+                <section data-background="img/byebye.gif">
+                  <h1 class="marked">obrigado =)</h1>
+                </section>
+
+            </div><!--slides-->
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+        <script src="js/angular.min.js"></script>
+
+        <script type="text/javascript">
+
+        angular.module('itemApp', [])
+          .controller('itemCtrl', function($scope){
+
+            $scope.items = [];
+
+            $scope.addItem = function() {
+              $scope.items.push($scope.texto);
+              console.log("Item adicionado: " + $scope.texto);
+            }
+
+        })
+
+        </script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+.reveal h1, .reveal h2, .reveal h3{
+	font-family: 'hero_lightlight';
+}
+
+.reveal p {
+	font-family: 'heroregular';
+}
+
+.intro h1 {
+	font-size: 76px;
+    color: #FFF;
+    text-align: left;
+    width: 600px;
+    letter-spacing: -2px;
+    text-transform: none;
+}
+
+.intro h3 {
+	text-align: left;
+    color: #F7CA18;
+    width: 600px;
+    letter-spacing: -2px;
+    text-transform: none;
+}
+
+.reveal section img {
+	background: transparent;
+	border: 0;
+	box-shadow: none;
+}
+
+.reveal section img.circle-img {
+	background: rgba(255, 255, 255, 0.12);
+    border: 4px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}

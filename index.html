@@ -4,9 +4,9 @@
     <head>
         <meta charset="utf-8">
 
-        <title>AngularJS - ng-power</title>
+        <title>Javascript Isomórfico</title>
 
-        <meta name="description" content="Apresentação sobre AngularJS no evento DAY.min.js do grupo GDG Duque de Caxias.">
+        <meta name="description" content="Apresentação sobre Javascript Isomórfico no evento DAY.min.js do grupo GDG Duque de Caxias.">
         <meta name="author" content="Igor Felipe">
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -36,6 +36,8 @@
         <link rel="stylesheet" href="css/base-min.css">
         <link rel="stylesheet" href="css/forms-min.css">
         <link rel="stylesheet" href="css/pure-min.css">
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/styles.css">
     </head>
 
     <body>
@@ -44,72 +46,86 @@
 
             <div class="slides">
 
-                <section data-background="img/angular.jpeg">
-                  <br><br><br><br><br><br>
-                  <h1 class="marked">ng-power</h1>
+                <!--<section data-background="#9b59b6">-->
+                <section data-background="img/em-busca-do-vale-encantado.jpg">
+                  <div class="intro">
+                    <h1>Em busca do Vale Encantado</h1>
+                    <h3>Construindo Aplicações em Javascript Isomórfico</h3>
+                  </div>
                 </section>
 
                 <section>
-                  <img class="circle-img" src="img/gabriel.jpg" alt="yo">
-                  <h2>ei, caras!</h2>
-                  <p>Eu sou Gabriel, organizer no GDG Caxias e developer na Unigranrio.</p>
-                  <p>GitHub <span class="marked">@gabrieclima</span></p>
-                  <p>Twitter <span class="marked">@gabriecslima</span></p>
-                  <p>FaceBook <span class="marked">@gabriecslima</span></p>
+                  <img class="circle-img" src="img/ricardo.jpg" alt="yo">
+                  <h2>Yo!</h2>
+                  <p>Meu nome é Ricardo Mello, Analista Desenvolvedor Java Full Stack.</p>
+                  <p>GitHub <span class="marked">@ricardo-mello</span></p>
+                  <p>Facebook <span class="marked">@ricardo.mellooo</span></p>
                 </section>
 
                 <section>
-                  <h2>o que o AngularJS tem de legal?</h2>
-                  <p class="fragment" data-fragment-index="0">two-way data binding</p>
-                  <p class="fragment" data-fragment-index="1">injeção de dependências</p>
-                  <p class="fragment" data-fragment-index="2">modularização e reuso</p>
-                  <p class="fragment" data-fragment-index="3">pronto pra trabalhar com APIs REST</p>
+                  <h1>WTF?!</h1>
                 </section>
 
                 <section>
-                  <h2>Produtividade</h2>
-                  <img src="img/productvity.jpg" width="800px"/>
+                  <h3>Código Javascript que pode ser executado tanto no cliente quanto no servidor</h3>
+                  <img class="no-bg" src="img/chrome-loves-node.png">
                 </section>
 
-                <section ng-app="itemApp" ng-controller="itemCtrl">
-                  <h2>Exemplo two-way data binding</h2>
-                  <form class="pure-form" ng-submit="addItem()">
-                    <input type="text" ng-model="texto" class="pure-input-rounded" style="color: black; text-align : center;">
-                  </form>
-                  <p>{{texto}}</p>
-                  <p ng-repeat="item in items" class="marked">
-                    {{item}}
-                  </p>
+                <section data-background="#F64747">
+                  <h1>E onde eu posso usar essa coisa?</h1>
+                  <p class="fragment" data-fragment-index="1">Templates</h2>
+                  <p class="fragment" data-fragment-index="1">Rotas</h2>
+                  <p class="fragment" data-fragment-index="1">Formatações</h2>
+                  <p class="fragment" data-fragment-index="1">Validações</h2>
+                  <p class="fragment" data-fragment-index="1">Et cetera</h2>
                 </section>
 
-                <section>
-                  <h2>HTML</h2>
-                  <img src="img/html-angular.jpg" alt=""  />
-                </section>
-
-                <section>
-                  <h2>JS</h2>
-                  <img src="img/js-angular.jpg" alt="" />
-                </section>
-
-                <section data-background-image="img/magic.gif">
-                  <br><br><h1>it's magic!</h1>
-                </section>
-
-                <section data-background-image="img/fluxo.jpg">
+                <section data-background="#4ECDC4">
+                  <h1>Tá, mas o que eu ganho com isso?</h1>
+                  <div class="fragment" data-fragment-index="1">
+                    <h4>Desempenho</h4>
+                    <h4>SEO</h4>
+                    <h4>Manutenibilidade</h4>
+                  </div>
                 </section>
 
                 <section>
-                  <h2>dependências</h2>
-                  <img src="img/dependencia-angular.jpg" alt="" />
+                  <h1>Tempos Antigos</h1>
+                  <h3>fat-server, thin-client</h3>
                 </section>
 
                 <section>
-                  <h1>Questions?</h1>
+                  <img src="img/tempos-antigos.jpg">
                 </section>
 
-                <section data-background="img/byebye.gif">
-                  <h1 class="marked">obrigado =)</h1>
+                <section>
+                  <h1>Meados de 2011</h1>
+                  <h3>thin-server, fat-client</h3>
+                </section>
+
+                <section>
+                  <img src="img/meados-2011.jpg">
+                </section>
+
+                <section>
+                  <h1>O Futuro</h1>
+                  <h3>fat-server, fat-client</h3>
+                </section>
+
+                <section>
+                  <img src="img/isomorphic-days.jpg">
+                </section>
+
+                <section>
+                  <h1>Example Time</h1>
+                </section>
+
+                <section data-background="img/questions.gif">
+                  <h1>Perguntas?</h1>
+                </section>
+
+                <section>
+                  <h1 class="marked">Obrigado!</h1>
                 </section>
 
             </div><!--slides-->
@@ -119,22 +135,6 @@
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.min.js"></script>
         <script src="js/angular.min.js"></script>
-
-        <script type="text/javascript">
-
-        angular.module('itemApp', [])
-          .controller('itemCtrl', function($scope){
-
-            $scope.items = [];
-
-            $scope.addItem = function() {
-              $scope.items.push($scope.texto);
-              console.log("Item adicionado: " + $scope.texto);
-            }
-
-        })
-
-        </script>
 
         <script>
 
